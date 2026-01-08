@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Northam</title>
+    <meta name="description" content="Eric Northam is the CEO and Founder of EasyBroker and Pincali, building technology solutions for real estate in Mexico.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --accent: #c44536;
+            --bg: #fafaf8;
+            --border: #e5e5e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 21px;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 60px 24px 80px;
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            margin-bottom: 80px;
+            animation: slideDown 0.6s ease forwards;
+            animation-delay: 0.2s;
+            opacity: 0;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 52px;
+            font-weight: 600;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .tagline {
+            font-size: 24px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .photo-container {
+            margin: 60px 0;
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+            animation-delay: 0.4s;
+        }
+
+        .photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: var(--border);
+            border: 3px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        section {
+            margin-bottom: 64px;
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        section:nth-of-type(1) { animation-delay: 0.5s; }
+        section:nth-of-type(2) { animation-delay: 0.6s; }
+        section:nth-of-type(3) { animation-delay: 0.7s; }
+        section:nth-of-type(4) { animation-delay: 0.8s; }
+
+        h2 {
+            font-size: 16px;
+            font-family: 'IBM Plex Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .links {
+            list-style: none;
+            margin-top: 24px;
+        }
+
+        .links li {
+            margin-bottom: 12px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 15px;
+        }
+
+        .links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .links a::before {
+            content: '→';
+            font-size: 18px;
+            transition: transform 0.2s ease;
+        }
+
+        .links a:hover::before {
+            transform: translateX(4px);
+        }
+
+        .highlight {
+            background: linear-gradient(to bottom, transparent 60%, rgba(196, 69, 54, 0.15) 60%);
+            padding: 0 4px;
+        }
+
+        .companies {
+            display: flex;
+            gap: 32px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .company {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 15px;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+            font-size: 16px;
+            font-family: 'IBM Plex Mono', monospace;
+            color: var(--text-secondary);
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+            animation-delay: 0.9s;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 40px 20px 60px;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+
+            .tagline {
+                font-size: 20px;
+            }
+
+            body {
+                font-size: 19px;
+            }
+
+            .photo {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Eric Northam</h1>
+            <p class="tagline">Builder, founder, and problem solver based in Mexico City</p>
+        </header>
+
+        <div class="photo-container">
+            <img class="photo" src='eric-northam-profile.jpg' alt='Eric Northam' />
+        </div>
+
+        <section>
+            <h2>Who I Am</h2>
+            <p>I've been living in Mexico City since 2012, where I'm raising my 12-year-old and staying active with calisthenics on gymnastic rings. Originally from Washington DC, I've been abroad since 2005—six years in Buenos Aires, two years traveling the world, and now deeply rooted here in Mexico.</p>
+            
+            <p>I studied Computer Science at UMBC and Takushoku University in Tokyo, where I eventually learned to speak Japanese well (and then subsequently forgot it). I still love to program, mainly in <span class="highlight">Ruby</span>, but I'm equally passionate about design, product, entrepreneurship and writing.</p>
+        </section>
+
+        <section>
+            <h2>What I'm Building</h2>
+            <p>I'm the CEO and Founder of <a href="https://www.easybroker.com" target="_blank" rel="noopener">EasyBroker</a>, which I started in 2007. We've built Mexico's leading Real Estate CRM, <span class="highlight">100% bootstrapped</span>, never taking outside investment.</p>
+            
+            <p>I came to Mexico because EasyBroker took off here, and I wanted to be closer to my clients and truly understand the market. Recently, we launched <a href="https://www.pincali.com" target="_blank" rel="noopener">Pincali</a>, a real estate portal with an ambitious goal: to become the leading source for finding homes to buy or rent in Mexico.</p>
+
+            <div class="companies">
+                <div class="company">
+                    → <a href="https://www.easybroker.com" target="_blank" rel="noopener">EasyBroker</a>
+                </div>
+                <div class="company">
+                    → <a href="https://www.pincali.com" target="_blank" rel="noopener">Pincali</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Why It Matters</h2>
+            <p>I believe in building solutions for important problems, especially in emerging markets where technology can transform traditional industries. Real estate in Mexico needed better tools, and we're building them. There's something deeply satisfying about creating sustainable, bootstrapped businesses that actually solve problems for people.</p>
+        </section>
+
+        <section>
+            <h2>Connect</h2>
+            <p>I'm most active on LinkedIn, where I share thoughts on building companies, technology, and life in Mexico. I occasionally write on Medium and share glimpses of work and life on Instagram.</p>
+            
+            <ul class="links">
+                <li><a href="mailto:eric@easybroker.com">Email me</a></li>
+                <li><a href="https://www.linkedin.com/in/enortham/" target="_blank" rel="noopener">Follow me on LinkedIn</a></li>
+                <li><a href="https://northam.us/" target="_blank" rel="noopener">Read my writing on Medium</a></li>
+                <li><a href="https://www.instagram.com/enortham/" target="_blank" rel="noopener">Instagram</a></li>
+                <li><a href="https://x.com/enortham" target="_blank" rel="noopener">X (Twitter)</a></li>
+            </ul>
+
+            <p style="margin-top: 40px;">We're always looking for talented people to join our team. If you're interested in building the future of real estate technology in Mexico, <a href="https://www.ebwantsyou.com" target="_blank" rel="noopener">check out our open positions</a>.</p>
+        </section>
+
+        <footer>
+            Mexico City, 2026
+        </footer>
+    </div>
+</body>
+</html>
